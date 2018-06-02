@@ -5,7 +5,7 @@ class BusquedaHogar extends Component {
      super()
      this.state = {
       llegada :"",
-      result: ""
+      resultado: ""
       }
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
@@ -31,9 +31,9 @@ class BusquedaHogar extends Component {
 
   /*************************************************************************************************************************************/
   //llamado de la api de scala
-        var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
-        targetUrl = 'https://codebreakerservices.herokuapp.com/answer/'+number;
-        fetch(proxyUrl + targetUrl, {
+        var
+        targetUrl = 'http://localhost:9000/answer/'+number;
+        fetch(targetUrl, {
           method: 'GET'
         }).then(response => response.json())
         .then(data => {
