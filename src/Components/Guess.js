@@ -38,7 +38,7 @@ class BusquedaHogar extends Component {
         }).then(response => response.json())
         .then(data => {
           this.setState({
-            resultado:data
+            resultado: "Answer: "+data
           });
         })
         .catch(error => console.log(error));
@@ -51,9 +51,6 @@ class BusquedaHogar extends Component {
     console.log(this.state.result)
     return (
           <div className="Guess">
-            <div className="Titulo">
-            <h1>Guess</h1>
-            </div>
             <div className="MenuPrincipal" >
             <form onSubmit={this.handleSubmit}>
               <div className="form-group" >
