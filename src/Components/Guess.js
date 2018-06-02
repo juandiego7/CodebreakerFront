@@ -32,7 +32,7 @@ class BusquedaHogar extends Component {
   /*************************************************************************************************************************************/
   //llamado de la api de scala
         var
-        targetUrl = 'http://localhost:9000/answer/'+number;
+        targetUrl = 'http://172.17.0.1:9000/answer/'+number;
         fetch(targetUrl, {
           method: 'GET'
         }).then(response => response.json())
